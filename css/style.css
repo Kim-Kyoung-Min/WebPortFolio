@@ -275,6 +275,7 @@ a {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
   .btn.btn-primary {
+    margin-bottom: 5px;
     color: #fff; }
     .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
       background: rgb(71, 107, 255); }
