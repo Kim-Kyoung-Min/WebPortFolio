@@ -32,8 +32,8 @@
           <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-about">KIM KYOUNG MIN</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="#section-services">Fantasy Stock</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-services">Fantasy Stock</a></li>
           <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
         </ul>
       </div>
@@ -91,9 +91,11 @@
             </p>
             <p>
               <a href="http://58.236.208.38:8080/mainPage" class="btn btn-primary px-4 py-2 btn-sm smoothscroll" target="_blank">Fantasy Stock</a>
-              <a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">연락하기</a>
               <a href="https://drive.google.com/file/d/1lFFcN6DxSVimbMmD0-hcAI7xPg1ShTaZ/view?usp=sharing"
-                class="btn btn-secondary px-4 py-2 btn-sm" target="_blank">이력서</a>
+              class="btn btn-primary px-4 py-2 btn-sm" target="_blank">이력서</a>
+              <a href="https://drive.google.com/file/d/1V6_t1aX09YLKxMGQKFr5FQiKITEe8rcX/view?usp=sharing"
+              class="btn btn-primary px-4 py-2 btn-sm" target="_blank">포트폴리오</a>
+              <a href="#section-contact" class="btn btn-secondary px-4 py-2 btn-sm smoothscroll">연락하기</a>
             </p>
         </div>
       </div>
@@ -246,6 +248,161 @@
       </div>
     </div>
   </section> <!-- .section -->
+
+  <section class="site-section" id="section-portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="section-heading text-center col-md-12">
+          <h2>My <strong>Portfolio</strong></h2>
+        </div>
+      </div>
+      <div class="filters">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          <li data-filter=".Spring">Spring Framework & Python</li>
+          <li data-filter=".JAVA">JAVA</li>
+          <li data-filter=".DataBase">DataBase</li>
+          <li data-filter=".Servlet">Servlet</li>
+          <li data-filter=".HTML">HTML & CSS</li>
+        </ul>
+      </div>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="single-portfolio col-sm-4 all Servlet Spring JAVA DataBase HTML">
+            <div class="relative">
+              <div class="thumb">
+                <div class="overlay overlay-bg"></div>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioFantasy">
+                  <img class="image img-fluid" src="images/Portfolio-fantasy.jpg" alt="">
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="PortfolioFantasy" tabindex="-1" role="dialog"
+                  aria-labelledby="PortfolioFantasyLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PortfolioFantasyLabel">FANTASY STOCK Summary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <object data="images/FantasyStock.svg" type="image/svg+xml"></object>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-inner">
+              <h4>FANTASY STOCK</h4>
+                <div class="cat">Spring Framework & Python, JAVA, DataBase(MySQL),<br>HTML & CSS / 
+                  <a href="http://58.236.208.38:8080/mainPage" target="_blank">FANTASYSTOCK 둘러보기</a>
+                </div>
+            </div>
+          </div>
+          <div class="single-portfolio col-sm-4 all HTML">
+            <div class="relative">
+              <div class="thumb">
+                <div class="overlay overlay-bg"></div>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioModalLandingPage">
+                  <img class="image img-fluid" src="images/0.LandingPage.jpg" alt="">
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="PortfolioModalLandingPage" tabindex="-1" role="dialog"
+                  aria-labelledby="PortfolioModalLandingPageLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PortfolioModalLandingPageLabel">LANDING PAGE Summary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <object data="images/LandingPage.svg" type="image/svg+xml"></object>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-inner">
+              <h4>LANDING PAGE</h4>
+                <div class="cat">HTML & CSS, JavaScript, Jquery, Iframe <br>
+                  <a href="https://kim-kyoung-min.github.io/" target="_blank">https://kim-kyoung-min.github.io/</a>
+                </div>
+            </div>
+          </div>
+          <div class="single-portfolio col-sm-4 all DataBase JAVA HTML">
+            <div class="relative">
+              <div class="thumb">
+                <div class="overlay overlay-bg"></div>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioBusTicketing">
+                  <img class="image img-fluid" src="images/0.BusTicketing.jpg" alt="">
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="PortfolioBusTicketing" tabindex="-1" role="dialog"
+                  aria-labelledby="PortfolioBusTicketingLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PortfolioBusTicketingLabel">BUS TICKETING Summary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <object data="images/BusTicketing.svg" type="image/svg+xml"></object>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-inner">
+              <h4>BUS TICKETING</h4>
+              <div class="cat">BootStrap, JSP, HTML & CSS, javaScript, Jquery, DataBase(MySQL)</div>
+            </div>
+          </div>
+          <div class="single-portfolio col-sm-4 all JAVA DataBase Servlet">
+            <div class="relative">
+              <div class="thumb">
+                <div class="overlay overlay-bg"></div>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioLibraryManagent">
+                  <img class="image img-fluid" src="images/0.LibraryManagent.PNG" alt="">
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="PortfolioLibraryManagent" tabindex="-1" role="dialog"
+                  aria-labelledby="PortfolioLibraryManagentLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="PortfolioLibraryManagentLabel">LIBRARY MANAGEMENT Summary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <object data="images/LibraryManagement.svg" type="image/svg+xml"></object>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-inner">
+              <h4>LIBRARY MANAGEMENT</h4>
+              <div class="cat">JAVA, JDBC, DataBase(Oracle)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- .section -->
+
+  <!-- .section -->
 
   <section class="site-section border-top pb-0" id="section-services">
     <div class="container">
@@ -490,160 +647,7 @@
   </section>
 
 
-  <section class="site-section" id="section-portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="section-heading text-center col-md-12">
-          <h2>My <strong>Portfolio</strong></h2>
-        </div>
-      </div>
-      <div class="filters">
-        <ul>
-          <li class="active" data-filter="*">All</li>
-          <li data-filter=".Spring">Spring Framework & Python</li>
-          <li data-filter=".JAVA">JAVA</li>
-          <li data-filter=".DataBase">DataBase</li>
-          <li data-filter=".Servlet">Servlet</li>
-          <li data-filter=".HTML">HTML & CSS</li>
-        </ul>
-      </div>
 
-      <div class="filters-content">
-        <div class="row grid">
-          <div class="single-portfolio col-sm-4 all Servlet Spring JAVA DataBase HTML">
-            <div class="relative">
-              <div class="thumb">
-                <div class="overlay overlay-bg"></div>
-                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioFantasy">
-                  <img class="image img-fluid" src="images/Portfolio-fantasy.jpg" alt="">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="PortfolioFantasy" tabindex="-1" role="dialog"
-                  aria-labelledby="PortfolioFantasyLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="PortfolioFantasyLabel">FANTASY STOCK Summary</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <object data="images/FantasyStock.svg" type="image/svg+xml"></object>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-inner">
-              <h4>FANTASY STOCK</h4>
-                <div class="cat">Spring Framework & Python, JAVA, DataBase(MySQL),<br>HTML & CSS / 
-                  <a href="http://58.236.208.38:8080/mainPage" target="_blank">FANTASYSTOCK 둘러보기</a>
-                </div>
-            </div>
-          </div>
-          <div class="single-portfolio col-sm-4 all HTML">
-            <div class="relative">
-              <div class="thumb">
-                <div class="overlay overlay-bg"></div>
-                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioModalLandingPage">
-                  <img class="image img-fluid" src="images/0.LandingPage.jpg" alt="">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="PortfolioModalLandingPage" tabindex="-1" role="dialog"
-                  aria-labelledby="PortfolioModalLandingPageLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="PortfolioModalLandingPageLabel">LANDING PAGE Summary</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <object data="images/LandingPage.svg" type="image/svg+xml"></object>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-inner">
-              <h4>LANDING PAGE</h4>
-                <div class="cat">HTML & CSS, JavaScript, Jquery, Iframe <br>
-                  <a href="https://kim-kyoung-min.github.io/" target="_blank">https://kim-kyoung-min.github.io/</a>
-                </div>
-            </div>
-          </div>
-          <div class="single-portfolio col-sm-4 all DataBase JAVA HTML">
-            <div class="relative">
-              <div class="thumb">
-                <div class="overlay overlay-bg"></div>
-                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioBusTicketing">
-                  <img class="image img-fluid" src="images/0.BusTicketing.jpg" alt="">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="PortfolioBusTicketing" tabindex="-1" role="dialog"
-                  aria-labelledby="PortfolioBusTicketingLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="PortfolioBusTicketingLabel">BUS TICKETING Summary</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <object data="images/BusTicketing.svg" type="image/svg+xml"></object>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-inner">
-              <h4>BUS TICKETING</h4>
-              <div class="cat">BootStrap, JSP, HTML & CSS, javaScript, Jquery, DataBase(MySQL)</div>
-            </div>
-          </div>
-          <div class="single-portfolio col-sm-4 all JAVA DataBase Servlet">
-            <div class="relative">
-              <div class="thumb">
-                <div class="overlay overlay-bg"></div>
-                <a style="cursor: pointer;" data-toggle="modal" data-target="#PortfolioLibraryManagent">
-                  <img class="image img-fluid" src="images/0.LibraryManagent.PNG" alt="">
-                </a>
-                <!-- Modal -->
-                <div class="modal fade" id="PortfolioLibraryManagent" tabindex="-1" role="dialog"
-                  aria-labelledby="PortfolioLibraryManagentLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="PortfolioLibraryManagentLabel">LIBRARY MANAGEMENT Summary</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <object data="images/LibraryManagement.svg" type="image/svg+xml"></object>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-inner">
-              <h4>LIBRARY MANAGEMENT</h4>
-              <div class="cat">JAVA, JDBC, DataBase(Oracle)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  <!-- .section -->
-
-  <!-- .section -->
 
   <section class="site-section bg-light" id="section-contact">
     <div class="container">
