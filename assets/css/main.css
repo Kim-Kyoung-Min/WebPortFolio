@@ -1288,11 +1288,15 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
+			width: 10.5rem;
+			height: 10.5rem;
+			line-height: 10.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+		    overflow: hidden;      /* 원 밖 자르기 */
+		    background: url('../images/KimKyoungMin.jpg') center center no-repeat;
+			background-size: 120%;
+    		background-position: center 30%;
 		}
 
 			#header .logo .icon:before {
@@ -1326,7 +1330,7 @@ input, select, textarea {
 				}
 
 			#header .content p {
-				text-transform: uppercase;
+				/*text-transform: uppercase;*/
 				letter-spacing: 0.2rem;
 				font-size: 0.8rem;
 				line-height: 2;
@@ -1417,7 +1421,7 @@ input, select, textarea {
 				padding-bottom: 0;
 				opacity: 0;
 			}
-
+		/*
 		@media screen and (max-width: 980px) {
 
 			#header .content p br {
@@ -1425,6 +1429,7 @@ input, select, textarea {
 			}
 
 		}
+		*/
 
 		@media screen and (max-width: 736px) {
 
@@ -1438,9 +1443,9 @@ input, select, textarea {
 				}
 
 			#header .logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
+				width: 10.5rem;
+				height: 10.5rem;
+				line-height: 10.5rem;
 			}
 
 				#header .logo .icon:before {
@@ -1464,7 +1469,7 @@ input, select, textarea {
 			}
 
 				#header .content .inner {
-					padding: 2.5rem 0;
+					padding: 1.5rem 0;
 				}
 
 				#header nav ul {
