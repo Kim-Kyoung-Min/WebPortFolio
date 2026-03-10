@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>KyoungMin</title>
@@ -13,8 +8,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
-		<!-- Wrapper -->
+			<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -28,16 +22,17 @@
 								<p>
 									경기 안양 거주, 1994년생(만 31살)<br /> 
 									인하우스 개발자로 2020년 11월 ~ 재직중(만 5년)<br />
-									Java, JS, jQuery, MySQL, Linux(Centos)
+									Java, JS, jQuery, MySQL, Linux(Centos)<br />
+									컴퓨터과학과 재학 중(2027년 여름 졸업)
 								</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">가스톡 관리자</a></li>
-								<li><a href="#work">가스톡</a></li>
-								<li><a href="#about">스마트미터링</a></li>
-								<li><a href="#contact">가스인 ERP</a></li>
+								<li><a href="#section-01">가스톡(메인)</a></li>
+								<li><a href="#section-02">가스톡 관리자(메인)</a></li>
+								<li><a href="#section-03">가스인 ERP(메인)</a></li>
+								<li><a href="#section-04">스마트미터링</a></li>
 							</ul>
 						</nav>
 						<nav>
@@ -51,311 +46,151 @@
 					</header>
 
 					<div id="main">
-
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							<!-- 가스톡 -->
+							<article id="section-01">
+								<p>가스톡(GasTalk)</p>
+								<h2 class="major">10만대 원격검침단말 대상<br/>대규모 관제 시스템 구축</h2>
+								<!-- <h3>★운영현황, 탱크관리, 벌크로리 사진 넣기</h3> -->
+								<span id="image-slider-01" class="image main">
+									<!--  
+									<img src="images/section-01-bg-01.png"/>
+									<img src="images/section-01-bg-02.png"/>
+									-->
+									<div class="dots-container"></div>
+								</span>
+								<h3 class="major">한 줄 요약</h3>
+								<p>3천여 명의 사용자를 수용하는 LPG 산업 특화 원격검침 관제 서비스 아키텍처 설계 및 전 영역(DB/Server/Web) 통합 구현(현 직장 메인 플랫폼)</p>
+								<h3 class="major">주요성과</h3>
+								<p>
+									1. 확장성을 고려한 데이터베이스 아키텍처 설계 및 최적화
+									<span class="detail-text">- 대규모 단말 데이터 수집 및 이력 관리를 위한 효율적인 DB 스키마 설계 및 인덱스 최적화 수행</span>
+								</p>
+								<p>
+									2. 엔드투엔드(End-to-End) 풀스택 서비스 구현
+									<span class="detail-text">- 비즈니스 로직의 안정성을 확보한 백엔드 API 설계 및 사용자 중심의 직관적인 프론트엔드 인터페이스 구축</span>
+								</p>
+								<p>
+									3. 인프라 가용성 확보 및 트래픽 제어 최적화
+									<span class="detail-text">- 서버 모니터링 및 부하 분산을 통한 시스템 안정성 강화 및 데이터 급증 시 안정적인 트래픽 핸들링 구현</span>
+								</p>
+								<p>
+									4. 대규모 IoT 인프라 관제 및 데이터 핸들링 역량 강화<br/>
+									<span class="detail-text">- 10만 대 규모의 단말 정보 통합 관리<br/>(방대한 인프라의 상태 및 메타데이터를 안정적으로 관리하기 위한 관제 시스템 고도화)</span>
+									<span class="detail-text">- 대용량 검침 데이터 최적화<br/>(10만 대 단말에서 실시간/주기적으로 송·수신되는 방대한 검침 이력 데이터의 무결성을 보장)</span>	
+								</p>
+								<p>
+									5. 요구사항 분석을 통한 서비스 고도화<br/>
+									<span class="detail-text">- 외부 인터페이스 통합 연동<br/>(알림톡, 팩스, SMS 등 다각화된 커뮤니케이션 채널 연동을 통한 사용자 편의성 증대)</span>
+									<span class="detail-text">- 사용자 경험(UX) 및 인터페이스(UI) 고도화<br/>(시스템의 점진적 개선(Develop)을 통한 가시성 및 조작 편의성 향상)</span>
+									<span class="detail-text">- 핵심 비즈니스 기능 확장<br/>(관제 시스템과 연계된 자체 이커머스 솔루션 구축 및 서비스 운영 효율화)</span>	
+								</p>
+								<!--  
+								<h3 class="major">사용언어</h3>
+								<p>Java, JavaScript, jQuery, MySQL, Linux(Centos)</p>
+								-->								
+								<h3 class="major">난관해결</h3>
+								<p>트래픽 급증으로 인한 DB 병목으로 인해 DB 서버가 다운<br/>Sleep 프로세스가 30분간 유지되어 프로세스를 점유하고 있어 Sleep 프로세스의 유지시간을 30분에서 10분으로 변경 후 DB 병목 해제, 해결 후 최대 1,000개 전체 프로세스를 130~150개로 유지</p>
 							</article>
-
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
-
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
-
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
+							
+							<!-- 가스톡 관리자 -->
+							<article id="section-02">
+								<p>가스톡 관리자</p>
+								<h2 class="major">10만 대 인프라 기반의 자산·정산 통합 운영 시스템 구축</h2>
+								<!-- <h3>★정산관리, 거래처관리, 단말설정(거래처), 렌탈자산</h3> -->
+								<span id="image-slider-01" class="image main">
+									<div class="dots-container"></div>
+								</span>
+								<h3 class="major">한 줄 요약</h3>
+								<p>현 직장 핵심 자산인 10만 원격검침단말 인프라의 안정적 운영을 위한 전용 관리 시스템 설계 및 엔드투엔드(E2E) 개발 수행</p>
+								<h3 class="major">주요성과</h3>
+								<p>1. 1인 기획/개발 및 운영</p>
+								<p>
+									2. 원격검침단말 기반 자동 정산 및 과금 솔루션 개발 
+									<span class="detail-text">- 실시간 단말 데이터를 활용한 거래처별 정산 로직 구현 및 청구 프로세스 자동화</span>
+								</p>
+								<p>
+									3. 단말기 및 연계 상품의 통합 SCM(공급망 관리) 플랫폼 구축
+									<span class="detail-text">- 주문-출고-배송 전 과정을 아우르는 물류 및 유통 관리 시스템 설계</span>	
+								</p>
+								<p>
+									4. 기업 IPO 대응을 위한 회계 정합성 확보 및 자산 관리 시스템 고도화
+									<span class="detail-text">- 렌탈 자산 현황, 재고 수불부, 수금 스케줄 관리 등 재무 건전성 증명을 위한 핵심 모듈 구현</span>	
+								</p>
+								<p>
+									5. 가스톡 플랫폼 내 쇼핑몰 비즈니스 로직 제어를 위한 통합 어드민 솔루션 구축
+									<span class="detail-text">- 상품 메타데이터 관리 시스템 및 쇼핑몰 운영 효율화를 위한 고도화된 백오피스 기능 개발</span>	
+								</p>
+								<!--  
+								<h3 class="major">사용언어</h3>
+								<p>Java, JavaScript, jQuery, MySQL, Linux(Centos)</p>
+								-->								
+								<h3 class="major">난관해결</h3>
+								<p>성공적인 기업 IPO를 위한 회계 감사 대응용 렌탈 자산 및 재고 수불 관리시스템 도입 과정에서, 회계 부서와의 적극적인 기술 소통을 통해 비즈니스 요구사항을 정확히 분석하고 실질적인 자산 운용 현황 가시화를 실현함</p>
+							</article>							
+							
+							
+							<!-- 가스인 ERP -->
+							<article id="section-03">
+								<p>가스인 ERP</p>
+								<h2 class="major">67만 대규모 소비처 컨트롤 최적화를 위한 LPG ERP 운영</h2>
+								<span id="image-slider-01" class="image main">
+									<div class="dots-container"></div>
+								</span>
+								<h3 class="major">한 줄 요약</h3>
+								<p>LPG ERP 플랫폼 인수 후 시스템 안정화 및 비즈니스 로직 고도화 전담 개발·운영</p>
+								<h3 class="major">주요성과</h3>
+								<p>
+									1. 기술 실무 중심의 사업 양·수도 프로세스 주도<br/>
+									<span class="detail-text">- 사업 이관에 따른 기술 계약 검토 및 외부 API 연동 권한 승계 등 플랫폼 영속성을 위한 핵심 행정·기술 지원 수행</span>
+								</p>
+								<p>
+									2. 데이터 마이그레이션 진행<br/>
+									<span class="detail-text">- 타사 ERP의 데이터 구조를 정밀 분석하여 이관 프로세스 설계 및 자사 시스템과의 데이터 이관 수행</span>
+								</p>
+								<p>
+									3. 사용자 요구사항 기반의 비즈니스 로직 고도화<br/>
+									<span class="detail-text">- 실무 사용자의 피드백을 분석하여 LPG 유통 특화 기능 및 운영 효율성 향상을 위한 신규 모듈 설계 및 구현</span>
+								</p>
+								<p>
+									4. 웹 기반 플랫폼의 모바일 확장 개발<br/>
+									<span class="detail-text">- 기존 LPG ERP 웹 시스템을 모바일 환경으로 확장하여 현장 중심의 접근성을 중요시하여 개발</span>
+								</p>
+								<p>
+									5. 레거시 코드 분석 및 시스템 안정화<br/>
+									<span class="detail-text">- 인수 초기 레거시 시스템의 기술 부채를 파악하고, 성능 저하 요인(느린 쿼리 등)을 튜닝하여 시스템 가용성 확보</span>
+								</p>
+								<!--  
+								<h3 class="major">사용언어</h3>
+								<p>Java, JavaScript, jQuery, MySQL, Linux(Centos)</p>
+								-->								
+								<h3 class="major">난관해결</h3>
+								<p>성공적인 기업 IPO를 위한 회계 감사 대응용 렌탈 자산 및 재고 수불 관리시스템 도입 과정에서, 회계 부서와의 적극적인 기술 소통을 통해 비즈니스 요구사항을 정확히 분석하고 실질적인 자산 운용 현황 가시화를 실현함</p>
+							</article>								
+							
 					</div>
 
-				<!-- Footer -->
+					<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; KimKyoungMin.</p>
 					</footer>
 
 			</div>
+			
+			<div id="image-popup" class="popup-overlay">
+			    <div class="popup-content">
+			        <div class="close-popup">&times;</div>
+			        
+			        <article id="popup-article">
+			            <div id="popup-image-container">
+			                </div>
+			        </article>
+			    </div>
+			</div>			
 
-		<!-- BG -->
+			<!-- BG -->
 			<div id="bg"></div>
 
-		<!-- Scripts -->
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
