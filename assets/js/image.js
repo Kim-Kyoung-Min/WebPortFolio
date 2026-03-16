@@ -1,81 +1,97 @@
 $(function(){
-	// 이미지 슬라이드 시간
-	const slidersTime = 5*1000;
-	
-	/* 이미지 슬라이드 시작 */
-	const sliders = document.querySelectorAll('.image.main');
+	const slidersTime = 4*1000;
 
-    sliders.forEach((slider) => {
-        const images = Array.from(slider.getElementsByTagName('img'));
-        const dotsContainer = slider.querySelector('.dots-container');
-        
-        if (images.length === 0) return;
+    // [함수] 슬라이더 초기화 및 높이 재계산 로직
+    function initSlider($targetSection) {
+        const sectionSliders = $targetSection.find('.image.main');
 
-        // [함수] 모든 이미지 중 가장 높은 값을 찾아 슬라이더 높이로 고정
-        function fixMaxHeight() {
-            let maxHeight = 0;
-            images.forEach(img => {
-                if (img.offsetHeight > maxHeight) {
-                    maxHeight = img.offsetHeight;
-                }
-            });
-            if (maxHeight > 0) {
-                slider.style.height = maxHeight + 'px';
-            }
-        }
+        sectionSliders.each(function() {
+            const slider = this;
+            const $images = $(slider).find('img');
+            const $dotsContainer = $(slider).find('.dots-container');
 
-        // 초기화
-        images[0].classList.add('active');
+            if ($images.length === 0) return;
 
-        if (images.length > 1) {
-            let currentIndex = 0;
-            let slideInterval;
-
-            // 도트 생성
-            images.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (index === 0) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    goToSlide(index);
-                    resetTimer();
+            // 높이 계산 함수
+            const fixMaxHeight = () => {
+                let maxHeight = 0;
+                $images.each(function() {
+                    // 팝업 내부에서 이미지가 로드된 후의 높이 측정
+                    if (this.offsetHeight > maxHeight) maxHeight = this.offsetHeight;
                 });
-                if (dotsContainer) dotsContainer.appendChild(dot);
-            });
+                if (maxHeight > 0) $(slider).css('height', maxHeight + 'px');
+            };
 
-            const dots = slider.querySelectorAll('.dot');
+            // 처음 열리는 경우에만 기본 설정 실행
+            if (!$targetSection.data('slider-initialized')) {
+                $images.eq(0).addClass('active');
 
-            function goToSlide(index) {
-                images.forEach(img => img.classList.remove('active'));
-                dots.forEach(d => d.classList.remove('active'));
-                images[index].classList.add('active');
-                dots[index].classList.add('active');
-                currentIndex = index;
+                if ($images.length > 1) {
+                    let currentIndex = 0;
+                    let slideInterval;
+
+                    // 도트 생성
+                    $dotsContainer.empty();
+                    $images.each((index) => {
+                        const $dot = $('<span class="dot"></span>');
+                        if (index === 0) $dot.addClass('active');
+                        $dot.on('click', (e) => {
+                            e.stopPropagation();
+                            goToSlide(index);
+                            resetTimer();
+                        });
+                        $dotsContainer.append($dot);
+                    });
+
+                    const $dots = $(slider).find('.dot');
+
+                    const goToSlide = (index) => {
+                        $images.removeClass('active').eq(index).addClass('active');
+                        $dots.removeClass('active').eq(index).addClass('active');
+                        currentIndex = index;
+                    };
+
+                    const startTimer = () => {
+                        slideInterval = setInterval(() => {
+                            goToSlide((currentIndex + 1) % $images.length);
+                        }, slidersTime);
+                    };
+
+                    const resetTimer = () => {
+                        clearInterval(slideInterval);
+                        startTimer();
+                    };
+
+                    startTimer();
+                }
+                $targetSection.data('slider-initialized', true);
             }
 
-            function startTimer() {
-                slideInterval = setInterval(() => {
-                    goToSlide((currentIndex + 1) % images.length);
-                }, slidersTime);
-            }
+            // 팝업이 열리는 애니메이션 시간을 고려하여 높이 재계산
+            // 0.4~0.5초 정도 뒤에 계산해야 팝업이 다 열린 상태의 높이를 잡습니다.
+            setTimeout(fixMaxHeight, 450);
+        });
+    }
 
-            function resetTimer() {
-                clearInterval(slideInterval);
-                startTimer();
-            }
+    // --- 이벤트 바인딩 ---
 
-            // 이미지 로드 완료 시점들에 높이 계산 실행
-            window.addEventListener('load', fixMaxHeight);
-            window.addEventListener('resize', fixMaxHeight);
-            
-            // 이미 로드된 경우를 대비해 즉시 실행
-            setTimeout(fixMaxHeight, 500); 
+    // 1. 섹션 링크 클릭 시 팝업 오픈 및 슬라이더 계산
+    $('a[href^="#section-"]').on('click', function(e) {
+        const targetId = $(this).attr('href');
+        const $targetSection = $(targetId);
 
-            startTimer();
-        } else {
-            // 이미지가 1개일 때도 높이는 잡아야 함
-            window.addEventListener('load', fixMaxHeight);
-        }
+        // 여기서 팝업을 여는 코드 (이미 작성하신 팝업 로직 호출)
+        // 예: $targetSection.fadeIn(); 또는 popup.style.display = 'block';
+
+        // 슬라이더 초기화 및 재계산 함수 호출
+        initSlider($targetSection);
+    });
+
+    // 2. 윈도우 리사이즈 시 모든 활성화된 슬라이더 높이 재조정
+    $(window).on('resize', function() {
+        $('[data-slider-initialized="true"]').each(function() {
+            initSlider($(this));
+        });
     });
 	/* 이미지 슬라이드 종료 */	
 	/* 이미지 팝업 시작*/
