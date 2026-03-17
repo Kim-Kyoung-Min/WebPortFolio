@@ -142,25 +142,11 @@
 	        border-radius: 0;   
 	        box-shadow: none;
 	    }
-	
-	    #popup-image-container img {
-	        width: calc(100% + 2rem); /* 부모 여백만큼 확장하여 꽉 채움 */
-	        margin-left: -1rem;       /* 중앙 정렬 보정 */
-	        margin-bottom: 1.5rem;    /* 이미지 간 가독성 확보 */
-	        border-radius: 0;
-	        /* 이미지가 너무 작게 보이지 않도록 높이 자동 조절 */
-	        height: auto; 
-	    }
-	
-	    .close-popup {
-	        position: fixed;    /* 스크롤을 내려도 닫기 버튼이 따라오게 함 */
-	        top: 10px;
-	        right: 15px;
-	        background: rgba(0, 0, 0, 0.7); /* 버튼 뒤 가독성 확보 */
-	        width: 45px;
-	        height: 45px;
-	        border-radius: 50%;
-	        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	    }
 	}	
+	
+	.section-info{
+		display:none;
+		margin-bottom: -30px;
+	}
+	
 /* 이미지 전체 팝업 종료 */
