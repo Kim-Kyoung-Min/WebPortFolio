@@ -1297,7 +1297,7 @@ input, select, textarea {
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		    overflow: hidden;      /* 원 밖 자르기 */
-		    background: url('../images/KimKyoungMin.jpg') center center no-repeat;
+		    background: url('../../images/KimKyoungMin.jpg') center center no-repeat;
 			background-size: 120%;
     		background-position: center 30%;
     		z-index:2;
@@ -1334,10 +1334,11 @@ input, select, textarea {
 				}
 
 			#header .content p {
-				/*text-transform: uppercase;*/
 				letter-spacing: 0.2rem;
 				font-size: 0.8rem;
 				line-height: 2;
+				word-break:keep-all;
+				overflow-wrap:anywhere;
 			}
 
 		#header nav ul {

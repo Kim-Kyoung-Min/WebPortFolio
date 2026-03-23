@@ -1,10 +1,7 @@
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
+
+	// 새로고침시 확대 가이드 초기화
+	localStorage.removeItem('zoomGuideShown');
 
 	var	$window = $(window),
 		$body = $('body'),
@@ -14,7 +11,6 @@
 		$main = $('#main'),
 		$main_articles = $main.children('article');
 
-	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
 			large:    [ '981px',   '1280px' ],
@@ -24,14 +20,12 @@
 			xxsmall:  [ null,      '360px'  ]
 		});
 
-	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Fix: Flexbox min-height bug on IE.
 		if (browser.name == 'ie') {
 
 			var flexboxFixTimeoutId;
@@ -53,80 +47,44 @@
 
 		}
 
-	// Nav.
 		var $nav = $header.children('nav'),
 			$nav_li = $nav.find('li');
-
-		// Add "middle" alignment classes if we're dealing with an even number of items.
-			if ($nav_li.length % 2 == 0) {
-
+			if ($nav_li.length % 2 == 0) 
+			{
 				$nav.addClass('use-middle');
 				$nav_li.eq( ($nav_li.length / 2) ).addClass('is-middle');
-
 			}
 
-	// Main.
 		var	delay = 325,
 			locked = false;
 
-		// Methods.
 			$main._show = function(id, initial) {
-
 				var $article = $main_articles.filter('#' + id);
 
-				// No such article? Bail.
-					if ($article.length == 0)
-						return;
-
-				// Handle lock.
-
-					// Already locked? Speed through "show" steps w/o delays.
-						if (locked || (typeof initial != 'undefined' && initial === true)) {
-
-							// Mark as switching.
-								$body.addClass('is-switching');
-
-							// Mark as visible.
-								$body.addClass('is-article-visible');
-
-							// Deactivate all articles (just in case one's already active).
-								$main_articles.removeClass('active');
-
-							// Hide header, footer.
-								$header.hide();
-								$footer.hide();
-
-							// Show main, article.
-								$main.show();
-								$article.show();
-
-							// Activate article.
-								$article.addClass('active');
-
-							// Unlock.
-								locked = false;
-
-							// Unmark as switching.
-								setTimeout(function() {
-									$body.removeClass('is-switching');
-								}, (initial ? 1000 : 0));
-
+					if ($article.length == 0) return;
+						if (locked || (typeof initial != 'undefined' && initial === true)) 
+						{
+							$body.addClass('is-switching');
+							$body.addClass('is-article-visible');
+							$main_articles.removeClass('active');
+							$header.hide();
+							$footer.hide();
+							$main.show();
+							$article.show();
+							$article.addClass('active');
+							locked = false;
+							setTimeout(function() {
+								$body.removeClass('is-switching');
+							}, (initial ? 1000 : 0));
 							return;
-
 						}
 
-					// Lock.
 						locked = true;
 
-				// Article already visible? Just swap articles.
-					if ($body.hasClass('is-article-visible')) {
-
-						// Deactivate current article.
-							var $currentArticle = $main_articles.filter('.active');
-
-							$currentArticle.removeClass('active');
-
-						// Show article.
+					if ($body.hasClass('is-article-visible')) 
+					{
+						var $currentArticle = $main_articles.filter('.active');
+						$currentArticle.removeClass('active');
 							setTimeout(function() {
 
 								// Hide current article.
@@ -335,7 +293,6 @@
 
 			$window.on('hashchange', function(event) {
 
-				// Empty hash?
 					if (location.hash == ''
 					||	location.hash == '#') {
 
@@ -348,7 +305,6 @@
 
 					}
 
-				// Otherwise, check for a matching article.
 					else if ($main_articles.filter(location.hash).length > 0) {
 
 						// Prevent default.
@@ -362,8 +318,6 @@
 
 			});
 
-		// Scroll restoration.
-		// This prevents the page from scrolling back to the top on a hashchange.
 			if ('scrollRestoration' in history)
 				history.scrollRestoration = 'manual';
 			else {
@@ -385,16 +339,16 @@
 
 			}
 
-		// Initialize.
-
-			// Hide main, articles.
 				$main.hide();
 				$main_articles.hide();
 
-			// Initial article.
-				if (location.hash != ''
-				&&	location.hash != '#')
+				if (location.hash != '' && location.hash != '#')
+				{
+					if (window.location.hash)  window.location.hash = '#'; 
+				}
+					/*
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+					*/
 })(jQuery);

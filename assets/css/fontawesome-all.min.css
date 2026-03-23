@@ -2368,16 +2368,6 @@
     content: "\f3a5"
 }
 */
-/*
-.fa-gem:before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url('../images/KimKyoungMin.jpg') no-repeat center;
-    background-size: contain;
-}
-*/
 .fa-genderless:before {
     content: "\f22d"
 }
