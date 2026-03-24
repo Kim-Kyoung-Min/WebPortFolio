@@ -4,17 +4,16 @@
 
 	/* --- 슬라이더 컨테이너 --- */
 	.image.main {
-	    display: flex;             /* 이미지 정렬을 위한 Flex */
-	    align-items: center;       /* 세로 가운데 정렬 */
-	    justify-content: center;   /* 가로 가운데 정렬 */
-	    margin: 2.5rem 0;
+	    display: flex;
+	    align-items: center;      /* 세로 중앙 */
+	    justify-content: center;  /* 가로 중앙 */
 	    width: 100%;
 	    position: relative;
+	    background-color: #f4f4f4;
+	    min-height: 200px;
+	    margin: 2.5rem 0;
 	    overflow: hidden;
 	    border-radius: 4px;
-	    background-color: #f4f4f4; /* 빈 공간 배경색 */
-	    /* JS에서 높이를 지정하기 전 최소 높이 확보 */
-	    min-height: 200px;
 	    transition: height 0.3s ease;
 	}
 	
